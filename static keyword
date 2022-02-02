@@ -1,0 +1,12 @@
+#include <stdio.h>
+void func();
+void main() {
+  func();
+  func();
+  func();
+}
+      void func()
+      {
+         static int x=1;
+          printf("%d",++x);
+      }
