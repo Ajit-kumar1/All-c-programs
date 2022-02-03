@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+    int num,rev=0,rem,org,p=0;
+    printf("Enter a number:");
+    scanf("%d",&num);
+    org=num;
+    while(num>0)
+    {
+        num=num/10;
+        p++;
+    }
+    num=org;
+    while(num>0)
+    {
+        rem=num%10;
+        rev=pow(rem,p)+rev;
+        num=num/10;
+    }
+    if(org==rev)
+    printf("Armstrong ");
+    else
+    printf("Not Armstrong ");
+}
