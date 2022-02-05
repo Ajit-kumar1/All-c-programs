@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+	char ch[100];char s[100];
+	int i,j=0,end;
+	printf("Enter a string ");
+	scanf("%[^\n]s",ch);
+	j=strlen(ch);
+	end=j-1;
+	for(i=0;i<=j/2;i++)
+	{
+		s[i]=ch[end];
+		end--;
+	}
+	s[i]='\0';
+	printf(" New is %s ",s);
+}
