@@ -1,0 +1,106 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+	int num,flag=0,i,rev=0,rem,org,b,a;
+	printf("*******  MENU  *******\n");
+	printf("1.Prime Number :\n");
+	printf("2.Even Odd \n");
+	printf("3.Palindrome\n");
+	printf("4.Armstrong\n");
+	printf("5.Reverse \n");
+	printf("6.Table\n");
+	scanf("%d",&a);
+	switch(a)
+	{
+		case 1:
+			printf("Enter a number:");
+			scanf("%d",&num);
+			b=num/2;
+			for(i=2;i<=b;i++)
+			{
+				if(num%i==0)
+				{
+					flag=1;
+				}
+		    }
+				if(flag==1)
+				{
+					printf("Not Prime Number:");
+				}
+				else
+				{
+				printf("Prime Number:");
+				}
+			break;
+		case 2:
+			printf("Enter a Number:");
+			scanf("%d",&num);
+			if(num%2==0)
+			{
+				printf("Even Number");
+			}
+			else
+			printf("Odd Number");
+			break;
+		case 3:
+			printf("Enter a Number:");
+			scanf("%d",&num);
+			org=num;
+			while(num>0)
+			{
+				rem=num%10;
+				rev=(rev*10)+rem;
+				num=num/10;
+			}
+			if(rev==org)
+			{
+				printf("Palindrome Number");
+			}
+			else
+			printf("Not Palindrome Number");
+			break;
+		case 4:
+			printf("Enter a Number:");
+			scanf("%d",&num);
+			org=num;
+			while(num>0)
+			{
+				rem=num%10;
+				rev=(rem*rem*rem)+rev;
+				num=num/10;
+			}
+			if(rev==org)
+			{
+				printf("Armstrong Number");
+			}
+			else
+			printf("Not Armstrong Number");
+			
+			break;
+		case 5:
+			printf("Enter a Number:");
+			scanf("%d",&num);
+			org=num;
+			while(num>0)
+			{
+				rem=num%10;
+				rev=(rev*10)+rem;
+				num=num/10;
+			}
+				printf("Reverse is %d ",rev);			
+			break;
+		case 6:
+			printf("Enter a Number:");
+			scanf("%d",&num);
+			for(i=1;i<=10;i++)
+			{
+				a=num*i;
+				printf("\n%d X %d = %d",num,i,a);
+				}	
+				break;
+		default:
+			printf("Invalid Choice");
+			break;
+	}
+}
