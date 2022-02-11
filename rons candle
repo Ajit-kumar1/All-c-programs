@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int total,sum=0,i,count=0,Number;
+    scanf("%d",&total);
+    for(Number = 1; Number <= total; Number++)
+  {
+    count = 0;
+    for (i = 2; i <= Number/2; i++)
+    {
+      if(Number%i == 0)
+      {
+           count++;
+        break;
+    }
+    }
+    if(count == 0 && Number != 1 )
+    {
+   sum++;
+    }  
+  }
+    printf("%d",total-sum);
+  return 0;
+}
