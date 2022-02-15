@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<ctype.h>
+#include<conio.h>
+void main()
+{      char ch[40];
+	int i,count=0,x;
+	clrscr();
+	printf("Enter a stirng:");
+	scanf("%[^\n]s",ch);
+	strupr(ch);
+	x=strlen(ch);
+	for(i=0;ch[i]!='\0';i++)
+	{
+		if(ch[i]=='A' || ch[i]=='E' || ch[i]=='O' ||ch[i]=='I' ||ch[i]=='U'||ch[i]==' ')
+		count++;
+	}
+	x=x-count;
+	printf("Total number of Consonents : %d ",x);
+	getch();
+}
