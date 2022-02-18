@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main(void) {
+	// your code goes here
+	int t,s1[10],s2[10],s3[10],i,j,k,m;
+	scanf("%d",&t);
+	for(i=0;i<t;i++)
+	{
+	    for(j=0;j<3;j++)
+	scanf("%d",&s1[j]);
+	for(k=0;k<3;k++)
+	scanf("%d",&s2[k]);
+	for(m=0;m<3;m++)
+	scanf("%d",&s3[m]);
+	}
+	if(s1[0]<s1[1] && s1[0]<s3[2])
+	{
+	    printf("Draw\n");
+	}
+	    else if(s1[1]<s1[0] && s1[1]<s1[2])
+	    {
+	        printf("Bob\n");
+	    }
+	else 
+	printf("Alice\n");
+if(s2[0]<s2[1] && s2[0]<s2[2])
+	{
+	    printf("Draw\n");
+	}
+	    else if(s2[1]<s2[0] && s2[1]<s2[2])
+	    {
+	        printf("Bob\n");
+	    }
+	else 
+	printf("Alice\n");
+	if(s3[0]<s3[1] && s3[0]<s3[2])
+	{
+	    printf("Draw\n");
+	}
+	    else if(s3[1]<s3[0] && s3[1]<s3[2])
+	    {
+	        printf("Bob\n");
+	    }
+	else 
+	printf("Alice");
+	return 0;
+}
