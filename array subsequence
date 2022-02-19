@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        long  int n;
+        cin >> n;
+        long sumeven = 0;
+        long  sumodd = 0;
+        long  int arr[n];
+        for ( long int i = 0; i < n; i++)
+        {
+            cin >> arr[i];
+        }
+
+        long output = 0;
+
+        for (long  int i = 0; i < n; i++)
+        {
+            if (i % 2 == 0)
+            {
+                
+                sumeven += arr[i];
+            }
+            else
+            {
+                sumodd += arr[i];
+            }
+        }
+        output = sumodd > sumeven ? sumodd : sumeven;
+
+        cout << output << endl;
+    }
+    return 0;
+}
