@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    int num,rem,rev=0,flag=0,org=0,i, dig=0;
+    scanf("%d",&num);
+    for(i=2;i<num/2;i++)
+    {
+        if(num%i==0)
+            flag=1;
+    }
+   // printf("\nflag %d",flag);
+    if(flag==0)
+    {
+        org=num;
+        while(num>0)
+        {
+            num=num/10;
+            dig++;
+        }
+        num=org;
+    while(num>0)
+    {
+        rem=num%10;
+        rev=pow(rem,dig)+rev;
+        num=num/10;
+    }
+    }
+    
+    if(flag==0 && org==rev)
+    printf("Y");
+    else
+        printf("N");
+            return 0;
+}
