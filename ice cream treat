@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int total;
+    scanf("%d",&total);
+    if(total>690)
+    {
+        printf("1 %d",total-690);
+    }
+    else
+        printf("0");
+    return 0;
+}
