@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<malloc.h>
+typedef struct polynomial
+{
+   int coeff;
+   int power;
+   struct polynomial *next;
+}node;
+int main()
+{
+node *head=NULL;
+int c,p,i;
+void insert_at_beg(node**,int,int);
+void traverse(node*);
+for(i=1;i<=4;i++)
+{
+printf("enter coefficent and power of term %d",i);
+scanf("%d%d",&c,&p);
+insert_at_beg(&head,c,p);
+}
+traverse(head);
+ return 0;
+}
+void traverse(node *head)
+{
+ while(head!=NULL)
+ {
+ printf("%dx%d +",head->coeff,head->power);
+ head=head->next;
+ }
+}
+void insert_at_beg(node **head,int c,int p)
+{
+node *temp;
+temp=(node*)malloc(sizeof(node));
+temp->coeff=c;
+temp->power=p;
+temp->next=*head;
+*head=temp;
+}
