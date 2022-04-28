@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+	int n,i,sum=0;
+	printf("Enter the number for square matrix : \n");
+	scanf("%d",&n);
+	i=n;
+	while(i>0)
+	{
+		sum=sum+(i*i);
+		i--;
+	}
+	printf("\nTotal squares in %d X %d matrix is %d",n,n,sum);
+}
