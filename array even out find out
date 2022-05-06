@@ -1,0 +1,16 @@
+#include<stdio.h>
+void main()
+{
+  int arr[10],;
+  printf("Enter elements in array:");
+  for(i=0;i<10;i++)
+  scanf("%d",&arr[i]);
+  printf("\n\n Checking for Even Odd ");
+  for(i=0;i<10;i++)
+  {
+    if(arr[i]%2==0)
+    printf("%d Even\n",arr[i]);
+    else
+    printf("%d Odd \n",arr[i]);
+  }
+}
