@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<stdlib.h>
+void main()
+{
+	int* ptr;
+	int n,i;
+	printf("Enter elements range :\n");
+	scanf("%d",&n);
+	ptr=(int*)calloc(n,sizeof(int));
+	if(ptr==NULL)
+	{
+		printf("Memory Not located :\n");
+		exit(0);
+		}	
+		else
+		{
+			printf("Memory located sucessully...\n");
+			for(i=0;i<n;i++)
+			scanf("%d",&ptr[i]);
+		
+		printf("Printing Elements of the Array...\n");
+		for(i=0;i<n;i++)
+		printf("%d\n",ptr[i]);
+}
+		free(ptr);
+
+}
