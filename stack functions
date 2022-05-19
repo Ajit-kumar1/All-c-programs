@@ -1,0 +1,58 @@
+#include<stdio.h>
+#include<conio.h>
+int top=-1,arr[100],i,choice=0,n,a;
+void push();
+void pop();
+void display();
+void main()
+{
+      //	int top=-1,arr[100],i,choice=0,n,a;
+
+		printf("Enter maximum length of stack\n ");
+		scanf("%d",&n);
+		printf("\n1.push\n2.Pop\n3.Display\n4.Exit\n");
+		do{
+		printf("\nEnter a choice");
+		scanf("%d",&choice);
+		switch(choice)
+		{
+			case 1: push();
+			break;
+			case 2: pop();
+			break;
+			case 3: display();
+			break;
+			case 4:
+				printf("Exit");
+
+				break;
+				}
+		 }while(choice!=4);
+
+}
+void push()
+{
+	if(top>=n-1)
+	printf("Over flow");
+	else  {
+	printf("Enter element");
+	scanf("%d",&a);
+	top++;
+	arr[top]=a;
+	}
+}
+void pop()
+{
+	if(top<0)
+	printf("Underflow");
+	else
+	{
+	  printf("\n%d is removed from stack");
+	  top--;
+	}
+}
+void display()
+{
+	for(i=top;i>=0;i++)
+	printf("%d\n",arr[i]);
+}
