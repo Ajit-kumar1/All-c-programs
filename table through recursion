@@ -1,0 +1,16 @@
+#include<stdio.h>
+void Mul(int num, int i)
+{
+    printf("\n");
+    printf("%d X %d = %d",num,i,num*i);
+    if(i<10)
+        return Mul(num, i+1);
+}
+int main()
+{
+    int num,i=0;
+    printf("Enter a number:");
+    scanf("%d",&num);
+    printf("Table of %d is:",num);
+    Mul(num, 1);
+}
