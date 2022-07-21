@@ -1,0 +1,18 @@
+#include<stdio.h>
+void swap(int*,int*);
+void main()
+{
+    int a,b;
+    a=10,b=20;
+    printf("Before swapping values are:\n A = %d \tB = %d",a,b);
+    swap(&a,&b);
+    printf("\nAfter Swapping Values are:\n");
+    printf("A = %d  \t B=%d",a,b);
+}
+void swap(int *p,int *o)
+{
+    int c;
+    c=*p;
+    *p=*o;
+    *o=c;
+}
