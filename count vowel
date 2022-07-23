@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<ctype.h>
+#include<string.h>
+void main()
+{
+char ch[100];
+int i,sum=0;
+printf("Enter a String:");
+scanf("%[^\n]s",&ch);
+strupr(ch);
+for(i=0;i<strlen(ch);i++)
+{
+	if(ch[i]=='A' || ch[i]=='E' || ch[i]=='I' || ch[i]=='O' || ch[i]=='U' )
+	sum++;
+}
+printf("Total Number of Vowels : %d",sum);
+}
