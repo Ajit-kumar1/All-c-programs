@@ -24,7 +24,7 @@ for(i = 0; i < strlen(str); i++)
 		}
 	}
 }
-
+printf("\n");
 printf("\n The Final String after Removing All Duplicates = %s ", str);
 
 return 0;
