@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int arr[100],i,n,flag,end;
+    printf("Enter range");
+    scanf("%d",&n);
+    end=n-1;
+    for(i=0;i<n;i++){
+    scanf("%d",&arr[i]);
+    }
+    for(i=0;i<n/2;i++)
+    {
+    flag=arr[i];
+    arr[i]=arr[end];
+    arr[end]=flag;
+    end--;
+    }
+    for(i=0;i<n;i++)
+    printf(" %d",arr[i]);
+    return 0;
+}
