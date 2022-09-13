@@ -1,0 +1,124 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<windows.h>
+#include<time.h>
+void main()
+{
+	int pass=0,withdrawl=0,op,opp,dep=0,rem=0,pas=0;
+	long int acc=0;
+	char ch,name[30];
+	printf("*****\tWelcome To Demo Bank\t*****\n");
+	printf("*******        **********    ***        ***    *******\n");
+	printf("**     **      **********    ** **    ** **   **     **\n");
+	printf("**      **     ****          **  **  **  **   **     **\n");
+	printf("**      **     *********     **   ****   **   **     **\n");
+	printf("**      **     ****          **          **   **     **\n");
+	printf("**     **      **********    **          **   **     **\n");
+	printf("*******        **********    **          **    *******\n\n");
+	time_t t;
+	time(&t);
+	printf("\t\t\t%s",ctime(&t));
+	sleep(2);
+	printf("Please Enter Your Account Number...\n");
+	scanf("%ld",&acc);
+	fflush(stdin);
+	printf("Please Enter Your Name :\n");
+	gets(name);
+	printf("Enter A New Password:\n");
+	scanf("%d",&pass);
+	printf("Please Confirm Password:\n");
+	scanf("%d",&pas);
+	system("cls");
+	printf("\nPlease wait...\n\n");
+	sleep(2);
+//	time(&t);
+//	printf("\n\n\t\t\t%s",ctime(&t));
+	if(pass==pas)		//comparing password...
+	{
+		sleep(1);
+		printf("\nPassword Changed Successfully...\n\n");
+		sleep(3);
+		system("cls");
+	time(&t);
+	printf("\n\n\t\t%s",ctime(&t));
+		printf("Please Choose \n\n 1.Savings Account. \n\n 2.Current Account\n");		//chhosing Account
+		scanf("%d",&opp);														//Account option
+//		if(op==1)
+//	{
+	system("cls");
+	time(&t);
+	printf("\n\n\t\t\t%s",ctime(&t));
+		printf("Please Choose a Option...\n");
+		printf("1.Balance Enquiry\n");
+		printf("2.Mini Statement\n");
+		printf("3.Withdrawl\n");
+		printf("4.Deposite\n");
+		printf("5.Exit\n");
+		fflush(stdin);
+		scanf("%d",&op);
+		switch(op)
+		{
+			case 1:
+				printf("\nYou have Insufficent Balance...\n");
+				printf("\nPress any key\n");
+				fflush(stdin);
+				scanf("%c",&ch);
+				break;
+			case 2:
+				printf("You have no more transaction...\n");
+				printf("Press any key\n");
+				fflush(stdin);
+				scanf("%c",&ch);
+				if(tolower(ch)=='y')
+				printf("Please go and Work\n");
+				//scanf("%d",&dep);
+				break;
+			case 3:
+				printf("Sorry you have no Balance...\n");
+				printf("Press any key:");
+				fflush(stdin);
+				scanf("%c",&ch);
+				if(ch=='y')
+				printf("I m sorry babu\n");
+				//scanf("%d",dep);
+				break;
+			case 4:
+				printf("Please enter amount...\n");
+				scanf("%d",&dep);
+				break;
+			case 5: exit(1);
+			default:
+				printf("Invalid Choice...\n");
+				sleep(1);
+				printf("\nPlease try next Time...\n");
+				break;
+		}
+	system("cls");
+	printf("1.Show Balance...\n\n2.Show Account Number...\n");
+	scanf("%d",&rem);
+	system("cls");
+//	printf("2.Show Account Number...\n");
+	if(rem==1)
+	{
+		printf("Please wait getting your balance...\n\n");
+		sleep(2);
+		printf("\nHello Mr. %s\n\n",name);
+		printf("Current Balance is %d.00 cr\n",dep);
+	}
+	else if(rem==2)
+	{
+		printf("\nPlease wait getting your Account details\n");
+		sleep(2);
+		printf("\nHello Mr. %s\n\n",name);
+		printf("\nYour Account Number is  %ld\n",acc);
+	}
+	else
+	printf("\nWrong Option\n\n");
+	printf("\nThankyou for using...\n");
+	printf("\n\nHave a great Day...\n\n");
+}
+else 
+printf("\nEntered Wrong Password Thankyou...\n\nPlease try next time...\n\n");
+	getch();
+}
