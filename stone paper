@@ -1,0 +1,88 @@
+#include<stdio.h>
+#include<windows.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{
+	int a,b,low=1,upper=3;
+	printf("\n\tWEL COME TO STONE PAPER SECISSOR GAME\n");
+	sleep(1);
+	printf("User 1 Input \n1 For Stone \n2 For Paper \n3 For Secissor\n");
+	scanf("%d",&a);
+	srand(time(NULL));
+	printf("\nUser 2 Input \n1 For Stone \n2 For Paper \n3 For Secissor\n");
+	b=(rand() %(upper-low+1)) + low;
+	//scanf("%d",&b);
+	if(a==1)
+	{
+		printf("\n   *  ");
+		printf("\n*Stone*");
+		printf("\n   *  ");
+	}
+	else if(a==2)
+	{
+		printf("\n|-------|");
+		printf("\n|-Paper-|");
+		printf("\n|-------|");
+	}
+	else if(a==3)
+	{
+		printf("\n \  /");
+		printf("\n  \/");
+		printf("\n//  \\");
+	}
+	if(b==1)
+	{
+		printf("\n   *  ");
+		printf("\n*Stone*");
+		printf("\n   *  ");
+	}
+	else if(b==2)
+	{
+		printf("\n|-------|");
+		printf("\n|-Paper-|");
+		printf("\n|-------|");
+	}
+	else if(b==3)
+	{
+		printf("\n \  /");
+		printf("\n  \/");
+		printf("\n//  \\");
+	}
+	if(a==b)
+	{
+		printf("Match Draw");
+	}
+	else if(a==1 &&  b==3)
+	{
+		printf("\nCongratulations Stone Wins...\n\nSecisor Lose...");
+	}
+	else if(a==2 && b==1)
+	{
+		printf("\nCongratulations Paper Wins...\n\nStone Lose...");
+	}
+	else if(a==3 && b==2)
+	{
+		printf("\nCongratulations Secisor  Wins...\n\nPaper lose...");
+	}
+	else if(b==1 && a==3)
+	{
+		printf("\nCongratulations Stone Wins...\n\nSecisor Lose...");
+	}
+	else if(b==2 && a==1)
+	{
+		printf("\nCongratulations Paper Wins...\n\nStone Lose...");
+	}
+	else if(b==3 && a==2)
+	{
+		printf("\nCongratulations Secisor Wins...\n\nPaper Lose...");
+	}
+	else
+	{
+	printf("\n\nInvalid Input...");
+	sleep(1);
+	printf("\n\nPlease Enter Valid Selection...");
+	}
+	printf("\n\nThanks for Playing... \n\nPlease Play Again...");
+	getch();
+}
