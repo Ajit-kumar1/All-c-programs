@@ -1,0 +1,18 @@
+#include<stdio.h>
+void main(){
+	int low=1,upper=10,i=0,b=0;
+	char ch[25];
+	printf("Enter a string: \n");
+	gets(ch);
+	b=(rand() %(upper-low+1)) + low;
+	printf("Encrypted string is : \t");
+	for(i=0;i<ch[i]!='\0';i++){
+		ch[i]=ch[i]+b;
+	}
+	printf("%s",ch);
+	printf("\nDecrypting String : ");
+	for(i=0;i<ch[i]!='\0';i++){
+		ch[i]=ch[i]-b;
+	}
+	printf("\t%s",ch);
+}
