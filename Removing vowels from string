@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void main()
+{
+    char ch[17],rev[19];
+    int i,end=0;
+    printf("Enter a String :\n");
+    scanf("%[^\n]s",ch);
+    for(i=0;ch[i]!='\0';i++){
+        if(ch[i]=='a'||ch[i]=='e'||ch[i]=='i'||ch[i]=='o'||ch[i]=='u')
+        {
+            continue;
+        }
+        else
+        {rev[end]=ch[i];
+        end++;
+        }
+    }
+    rev[end]='\0';
+    printf("After Removing Vowels :  %s",rev);
+   
+}
