@@ -8,7 +8,7 @@ void main()
 	scanf("%[^\n]s",ch);
 	j=strlen(ch);
 	end=j-1;
-	for(i=0;i<=j/2;i++)
+	for(i=0;i<j;i++)
 	{
 		s[i]=ch[end];
 		end--;
