@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+	char ch[15],ne[15],temp;
+	int i,end,c;
+	scanf("%[^\n]s",ch);
+	c=strlen(ch)-1;
+	end=c;
+	for(i=0;i<c/2;i++){
+		temp=ch[i];
+		ch[i]=ch[end];
+		ch[end]=temp;	
+		end--;
+	}
+	printf("%s",ch);
+}
